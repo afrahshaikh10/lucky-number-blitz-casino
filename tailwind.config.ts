@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				casino: {
+					'gold': '#E6C555',
+					'red': '#D32F2F',
+					'purple': '#4A235A',
+					'dark-purple': '#1A1F2C',
+					'light-purple': '#9b87f5',
+					'table': '#0B5345'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +93,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'bounce-in': {
+					'0%': { transform: 'scale(0)', opacity: '0' },
+					'60%': { transform: 'scale(1.1)', opacity: '1' },
+					'100%': { transform: 'scale(1)' }
+				},
+				'number-roll': {
+					'0%': { transform: 'translateY(0)' },
+					'25%': { transform: 'translateY(-100%)' },
+					'50%': { transform: 'translateY(-200%)' },
+					'75%': { transform: 'translateY(-300%)' },
+					'100%': { transform: 'translateY(-400%)' }
+				},
+				'pulse-win': {
+					'0%': { boxShadow: '0 0 0 0 rgba(46, 204, 113, 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px rgba(46, 204, 113, 0)' },
+					'100%': { boxShadow: '0 0 0 0 rgba(46, 204, 113, 0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'spin-slow': 'spin-slow 3s linear infinite',
+				'bounce-in': 'bounce-in 0.5s ease-out forwards',
+				'number-roll': 'number-roll 0.5s ease-out forwards',
+				'pulse-win': 'pulse-win 1.5s infinite'
 			}
 		}
 	},
